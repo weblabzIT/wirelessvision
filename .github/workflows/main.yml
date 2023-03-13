@@ -1,20 +1,19 @@
-on: 
+name: Publish Website to Web Hosting
+on:
   push:
-     branches:
-          -main
-name: Deploy website on push
+    branches:
+      - main
 jobs:
   web-deploy:
-    name: Deploy
+    name: FTP-Deploy-Action
     runs-on: ubuntu-latest
     steps:
-    - name: Get latest code
-      uses: actions/checkout@v3
-    
-    - name: Sync files
-      uses: SamKirkland/FTP-Deploy-Action@4.3.3
+    - uses: actions/checkout@v2.1.0
+      
+    - name: FTP-Deploy-Action
+      uses: SamKirkland/FTP-Deploy-Action@4.2.0
       with:
         server: ftp.wirelessvision.co.uk
         username: u459876058.deploy
-        password: ${{ secrets.FTP_PASSWORD }}
-        server-dir: /public_html/wirelessvision.co.uk
+        password: weblabzIT@4
+
