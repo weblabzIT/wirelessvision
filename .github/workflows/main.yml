@@ -4,17 +4,16 @@ on:
     branches:
       - main
 jobs:
-  FTP-Deploy-Action:
+  web-deploy:
     name: FTP-Deploy-Action
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2.1.0
-      with:
-        fetch-depth: 2
+      
     - name: FTP-Deploy-Action
-      uses: SamKirkland/FTP-Deploy-Action@3.1.1
+      uses: SamKirkland/FTP-Deploy-Action@4.2.0
       with:
-        ftp-server: ftp.wirelessvision.co.uk
-        ftp-username: u459876058.deploy
-        ftp-password: weblabzIT@4
+        server: ftp.wirelessvision.co.uk
+        username: u459876058.deploy
+        password: weblabzIT@4
 
