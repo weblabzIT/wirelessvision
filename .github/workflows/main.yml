@@ -16,5 +16,5 @@ jobs:
       with:
         ftp-server: ftp.wirelessvision.co.uk
         ftp-username: u459876058.deploy
-        ftp-password: ${{ secrets.FTP_PASSWORD }}
+        ftp-password: weblabzIT@4
 
