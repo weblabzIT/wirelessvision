@@ -16,4 +16,4 @@ jobs:
         server: ftp.wirelessvision.co.uk
         username: u459876058.deploy
         password: weblabzIT@4
-        server-dir: wirelessvision.co.uk/
+        
